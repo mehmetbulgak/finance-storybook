@@ -1,0 +1,37 @@
+@import "../../../styles/colors";
+
+.trend {
+  background-color: $color-background;
+  padding: 16px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-primary;
+  }
+
+  &__change {
+    font-size: 14px;
+    font-weight: 500;
+
+    &--positive {
+      color: $color-success;
+    }
+
+    &--negative {
+      color: $color-error;
+    }
+  }
+
+  &__chart {
+    width: 100%;
+    height: 200px;
+  }
+}

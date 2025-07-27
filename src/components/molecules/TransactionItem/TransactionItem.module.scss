@@ -1,0 +1,55 @@
+@import "../../../styles/colors";
+
+.transaction {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background-color: $color-background;
+
+  &__icon {
+    font-size: 20px;
+    color: $color-primary;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 4px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-primary;
+  }
+
+  &__amount {
+    font-size: 14px;
+    font-weight: 600;
+
+    &--income {
+      color: $color-success;
+    }
+
+    &--expense {
+      color: $color-error;
+    }
+  }
+
+  &__meta {
+    font-size: 12px;
+    color: $color-body;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+}

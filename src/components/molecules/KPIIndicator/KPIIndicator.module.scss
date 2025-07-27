@@ -1,0 +1,54 @@
+@import "../../../styles/colors";
+
+.kpi {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: $color-background;
+  padding: 16px;
+
+  &__icon {
+    font-size: 20px;
+    color: $color-primary;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__label {
+    font-size: 13px;
+    color: $color-body;
+    font-weight: 500;
+  }
+
+  &__value {
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-primary;
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+
+  &__unit {
+    font-size: 14px;
+    color: $color-body;
+  }
+
+  &__trend {
+    font-size: 13px;
+    font-weight: 500;
+
+    &--up {
+      color: $color-success;
+    }
+
+    &--down {
+      color: $color-error;
+    }
+  }
+}

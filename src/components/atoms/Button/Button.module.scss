@@ -1,0 +1,125 @@
+@import "../../../styles/colors";
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    color: $color-background;
+
+    &:hover {
+      background-color: darken($color-primary, 8%);
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+
+    &:hover {
+      background-color: rgba($color-primary, 0.05);
+    }
+  }
+
+  &--danger {
+    background-color: $color-error;
+    color: $color-background;
+
+    &:hover {
+      background-color: darken($color-error, 8%);
+    }
+  }
+
+  &--ghost {
+    background-color: transparent;
+    color: $color-primary;
+
+    &:hover {
+      background-color: rgba($color-primary, 0.05);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 1px solid $color-border;
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-muted;
+    }
+  }
+
+  &--link {
+    background-color: transparent;
+    color: $color-accent;
+    padding: 0;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--tertiary {
+    background-color: $color-muted;
+    color: $color-body;
+
+    &:hover {
+      background-color: darken($color-muted, 3%);
+    }
+  }
+
+  &--sm {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  &--md {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  &--lg {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+
+  &__loader {
+    width: 16px;
+    height: 16px;
+    border: 2px solid $color-background;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

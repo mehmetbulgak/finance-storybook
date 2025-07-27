@@ -1,0 +1,142 @@
+@import "../../../styles/colors";
+
+.credit-card {
+  background-color: $color-secondary;
+  color: $color-background;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+
+  &--clickable {
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__type {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &--dark {
+      color: $color-muted;
+    }
+
+    &--light {
+      color: $color-primary;
+    }
+
+    &--accent {
+      color: white;
+    }
+  }
+
+  &__status {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 6px;
+
+    &--active {
+      background-color: $color-success-bg;
+      color: $color-success;
+    }
+
+    &--blocked {
+      background-color: $color-warning-bg;
+      color: $color-warning;
+    }
+
+    &--expired {
+      background-color: $color-error-bg;
+      color: $color-error;
+    }
+  }
+
+  &__number {
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+
+  &__label {
+    font-weight: 400;
+  }
+
+  &__value {
+    font-weight: 500;
+    color: $color-background;
+  }
+
+  &__balance {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 8px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+  }
+
+  &__amount {
+    font-size: 15px;
+    font-weight: 600;
+    color: $color-background;
+    text-align: left;
+  }
+
+  &__available {
+    font-size: 15px;
+    font-weight: 600;
+    color: $color-background;
+    text-align: right;
+  }
+
+  &--dark {
+    background-color: $color-third;
+    color: $color-background;
+  }
+
+  &--light {
+    background-color: $color-soft;
+    color: $color-primary;
+
+    .credit-card__value,
+    .credit-card__amount {
+      color: $color-primary;
+    }
+  }
+
+  &--accent {
+    background-color: $color-info;
+    color: white;
+
+    .credit-card__value,
+    .credit-card__amount {
+      color: white;
+    }
+  }
+}

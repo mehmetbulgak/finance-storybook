@@ -1,0 +1,78 @@
+@import "../../../styles/colors";
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  line-height: 1;
+  user-select: none;
+  background-color: $color-muted;
+  color: $color-primary;
+
+  &--rounded {
+    border-radius: 999px;
+  }
+
+  &--sm {
+    font-size: 13px;
+    padding: 4px 10px;
+  }
+
+  &--md {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  &--default {
+    background-color: $color-muted;
+    color: $color-primary;
+  }
+
+  &--success {
+    background-color: $color-success-bg;
+    color: $color-success;
+  }
+
+  &--warning {
+    background-color: $color-warning-bg;
+    color: $color-warning;
+  }
+
+  &--danger {
+    background-color: $color-error-bg;
+    color: $color-error;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  &__text {
+    display: inline-block;
+  }
+
+  &__close-button {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    margin-left: 6px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    svg {
+      font-size: 16px;
+    }
+  }
+}

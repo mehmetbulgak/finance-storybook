@@ -1,0 +1,23 @@
+@import "../../../styles/colors";
+
+.financial-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px;
+  background-color: $color-muted;
+  border-radius: 12px;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h4 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: $color-primary;
+    }
+  }
+}
